@@ -1,0 +1,20 @@
+spring:
+  application:
+    name: recyce-eureka-service-ha
+  profiles:
+    active: peer2
+server:
+  port: 8762
+#因为当前的eureka是单机版，需要配置
+eureka:
+  instance:
+    hostname: peer2
+  client:
+    service-url:
+      defaultZone: http://westar:recycle@peer1:8761/eureka,http://westar:recycle@peer3:8763/eureka
+security:
+  basic:
+    enabled: true #开启安全配置，只能放在application.yml中
+  user:
+    name: westar
+    password: recycle
