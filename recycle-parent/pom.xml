@@ -7,6 +7,10 @@
     <groupId>com.westar.recycle</groupId>
     <artifactId>recycle-parent</artifactId>
     <version>1.0-SNAPSHOT</version>
+    <modules>
+        <module>recyce-eureka-service</module>
+        <module>recyce-eureka-service-ha</module>
+    </modules>
     <packaging>pom</packaging>
 
     <!--声明为spring-boot-->
